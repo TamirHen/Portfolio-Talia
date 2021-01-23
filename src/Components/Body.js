@@ -11,7 +11,7 @@ const Body = () => {
         rowEnd: 7,
         columnStart: 1,
         columnEnd: 6,
-        name: "Gravity Falls",
+        name: "Gravity Falls 1",
         image:
           "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Ferikkain%2Ffiles%2F2015%2F08%2FGravity-Falls.jpg",
       },
@@ -20,7 +20,7 @@ const Body = () => {
         rowEnd: 4,
         columnStart: 6,
         columnEnd: 9,
-        name: "Gravity Falls",
+        name: "Gravity Falls 2",
         image:
           "https://d23.com/app/uploads/2016/02/1180-x-600-021616_gravity-falls-press-event-recap-780x440-1455236757.jpg",
       },
@@ -29,7 +29,7 @@ const Body = () => {
         rowEnd: 7,
         columnStart: 6,
         columnEnd: 9,
-        name: "Gravity Falls",
+        name: "Gravity Falls 3",
         image:
           "https://149455152.v2.pressablecdn.com/wp-content/uploads/2018/07/gravity-falls-complete-feature.png",
       },
@@ -38,7 +38,7 @@ const Body = () => {
         rowEnd: 11,
         columnStart: 1,
         columnEnd: 5,
-        name: "Gravity Falls",
+        name: "Gravity Falls 4",
         image:
           "https://www.themarysue.com/wp-content/uploads/2014/08/cf5fffdd-8793-4f3d-9f66-d7c1f6032bda.jpg",
       },
@@ -47,7 +47,7 @@ const Body = () => {
         rowEnd: 11,
         columnStart: 5,
         columnEnd: 9,
-        name: "Gravity Falls",
+        name: "Gravity Falls 5",
         image: "https://miro.medium.com/max/1100/0*chhQu6AxnCDmEhfS.jpg",
       },
     ],

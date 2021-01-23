@@ -13,7 +13,7 @@ const Footer = () => {
         (which, actually, will work as a full-fledged website).
       </section>
       <section className="lower footer-section">
-        ©2021 Tamir Hen. All rights reserved.
+        {`©${new Date().getFullYear()} Tamir Hen. All rights reserved.`}
       </section>
     </footer>
   );

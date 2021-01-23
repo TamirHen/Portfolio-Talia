@@ -14,7 +14,7 @@ const Image = (props) => {
       }}
     >
       <img className="image" src={image} alt={name} />
-      <p className="figure-text">test</p>
+      <p className="figure-text">{name}</p>
     </figure>
   );
 };
