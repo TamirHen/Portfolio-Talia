@@ -1,0 +1,33 @@
+h4 {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+p {
+  margin: 5px 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 50%;
+}
+
+.header-link {
+  padding: 0px 9px;
+}
