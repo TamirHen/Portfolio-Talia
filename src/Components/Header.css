@@ -12,6 +12,10 @@ ul {
   list-style-type: none;
   padding-inline-start: 0px;
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 .header {
   height: 100px;

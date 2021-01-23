@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 
@@ -16,7 +17,7 @@ const Header = () => {
       <ul className="header-links">
         {DUMMY_DATA.headerLinks.map((link) => (
           <li className="header-link" id={`link-${link}`}>
-            {link}
+            <Link to="/">{link}</Link>
           </li>
         ))}
       </ul>
