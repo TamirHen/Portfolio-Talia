@@ -2,15 +2,15 @@ import React from "react";
 
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer>
       <section className="upper footer-section">
-        This site is a great example of what we have said before: sometimes it’s
-        <br />
-        enough to create an excellent “About me” page to promote your brand
-        <br />
-        (which, actually, will work as a full-fledged website).
+        {props.data.footerText.split("\n").map((line) => (
+          <>
+            <p className="text-line">{line}</p>
+          </>
+        ))}
       </section>
       <section className="lower footer-section">
         {`©${new Date().getFullYear()} Tamir Hen. All rights reserved.`}

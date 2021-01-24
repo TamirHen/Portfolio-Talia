@@ -1,23 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Header.css";
 
-const Header = () => {
-  const DUMMY_DATA = {
-    headerLinks: ["Film", "Photography", "Design", "Genres", "Blog", "About"],
-  };
-
+const Header = (props) => {
   return (
     <header className="header">
       <div className="text-header">
-        <h4>Talia's Portfolio</h4>
-        <p>Subtitle here</p>
+        <NavLink to="/">
+          <h4>{props.data.title}</h4>
+          <p>{props.data.subtitle}</p>
+        </NavLink>
       </div>
       <ul className="header-links">
-        {DUMMY_DATA.headerLinks.map((link) => (
+        {props.data.headerLinks.map((link) => (
           <li className="header-link" id={`link-${link}`}>
-            <Link to="/">{link}</Link>
+            <NavLink to="/">{link}</NavLink>
           </li>
         ))}
       </ul>

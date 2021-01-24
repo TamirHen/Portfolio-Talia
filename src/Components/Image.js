@@ -1,9 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Image.css";
 
 const Image = (props) => {
-  const { image, name, rowStart, rowEnd, columnStart, columnEnd } = props;
+  const {
+    image,
+    name,
+    genre,
+    rowStart,
+    rowEnd,
+    columnStart,
+    columnEnd,
+  } = props;
   return (
     <figure
       style={{
@@ -13,8 +22,13 @@ const Image = (props) => {
         gridColumnEnd: columnEnd,
       }}
     >
-      <img className="image" src={image} alt={name} />
-      <p className="figure-text">{name}</p>
+      <Link to={`/project/${name}`}>
+        <img className="image" src={image} alt={name} />
+        <div className="figure-text">
+          <p style={{ fontWeight: "bold" }}>{name}</p>
+          <p style={{ fontSize: "14px", marginTop: "3px" }}>{genre}</p>
+        </div>
+      </Link>
     </figure>
   );
 };
