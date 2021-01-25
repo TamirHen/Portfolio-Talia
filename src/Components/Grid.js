@@ -4,10 +4,10 @@ import React from "react";
 import Image from "./Image";
 
 const Grid = (props) => {
-  const { data, page, cubeId } = props;
-  const gridRows = data.pages[page].grid.rows;
-  const gridColumns = data.pages[page].grid.columns;
-  const images = data.pages[page].images;
+  const { data, page, cubeId, hlink } = props;
+  const gridRows = data.pages[page]?.grid.rows || hlink?.grid.rows;
+  const gridColumns = data.pages[page]?.grid.columns || hlink?.grid.columns;
+  const images = data.pages[page]?.images;
 
   const style = {
     gallery: {
@@ -21,8 +21,8 @@ const Grid = (props) => {
 
   const pageRender = () => {
     switch (page) {
-      case "home":
-        return images?.map(
+      case "hlink":
+        return hlink.images?.map(
           (image) =>
             data.cubes.find((cube) => cube.id == image.cubeId) && (
               <Image
@@ -48,7 +48,18 @@ const Grid = (props) => {
         );
 
       default:
-        break;
+        //Homepage
+        return images?.map(
+          (image) =>
+            data.cubes.find((cube) => cube.id == image.cubeId) && (
+              <Image
+                key={image.cubeId}
+                {...image}
+                {...data.cubes.find((cube) => cube.id == image.cubeId)}
+                page={page}
+              />
+            )
+        );
     }
   };
 

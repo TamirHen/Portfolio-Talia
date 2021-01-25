@@ -49,7 +49,7 @@ function App() {
         image: "https://miro.medium.com/max/1100/0*chhQu6AxnCDmEhfS.jpg",
       },
     ],
-    headerLinks: ["Film", "Photography", "Design", "Genres", "Blog", "About"],
+    headerLinks: ["Film", "Photography", "Design", "genre", "Blog", "About"],
     footerText: `This site is a great example of what we have said before: sometimes it’s\n
       enough to create an excellent “About me” page to promote your brand\n
       (which, actually, will work as a full-fledged website).`,
@@ -140,6 +140,130 @@ function App() {
           },
         ],
       },
+      hlinks: [
+        {
+          name: "Film",
+          grid: {
+            rows: 8,
+            columns: 8,
+          },
+          images: [
+            {
+              cubeId: 2,
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
+            {
+              cubeId: 1,
+              rowStart: 4,
+              rowEnd: 9,
+              columnStart: 4,
+              columnEnd: 9,
+            },
+          ],
+        },
+        {
+          name: "Photography",
+          grid: {
+            rows: 8,
+            columns: 8,
+          },
+          images: [
+            {
+              cubeId: 2,
+              rowStart: 1,
+              rowEnd: 8,
+              columnStart: 2,
+              columnEnd: 9,
+            },
+            {
+              cubeId: 4,
+              rowStart: 1,
+              rowEnd: 9,
+              columnStart: 1,
+              columnEnd: 10,
+            },
+          ],
+        },
+        {
+          name: "Design",
+          grid: {
+            rows: 8,
+            columns: 8,
+          },
+          images: [
+            {
+              cubeId: 2,
+              rowStart: 1,
+              rowEnd: 8,
+              columnStart: 2,
+              columnEnd: 9,
+            },
+            {
+              cubeId: 4,
+              rowStart: 1,
+              rowEnd: 9,
+              columnStart: 1,
+              columnEnd: 10,
+            },
+          ],
+        },
+        {
+          name: "Genre",
+          grid: {
+            rows: 8,
+            columns: 8,
+          },
+          images: [
+            {
+              cubeId: 2,
+              rowStart: 1,
+              rowEnd: 8,
+              columnStart: 2,
+              columnEnd: 9,
+            },
+            {
+              cubeId: 4,
+              rowStart: 1,
+              rowEnd: 9,
+              columnStart: 1,
+              columnEnd: 10,
+            },
+          ],
+        },
+        {
+          name: "Blog",
+          header: "This is the page's header",
+          text: "Some text inside Blog page...",
+          grid: {
+            rows: 8,
+            columns: 8,
+          },
+          images: [
+            {
+              cubeId: 2,
+              rowStart: 1,
+              rowEnd: 8,
+              columnStart: 2,
+              columnEnd: 9,
+            },
+            {
+              cubeId: 4,
+              rowStart: 1,
+              rowEnd: 9,
+              columnStart: 1,
+              columnEnd: 10,
+            },
+          ],
+        },
+        {
+          name: "About",
+          header: "This is the page's header",
+          text: "Some text about me...",
+        },
+      ],
     },
   };
 
