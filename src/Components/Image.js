@@ -25,7 +25,9 @@ const Image = (props) => {
         // cursor: page === "home" ? "pointer" : "unset",
       }}
     >
-      {page === "home" ? (
+      {page === "project" ? (
+        <img className={"image"} src={image} alt={name} />
+      ) : (
         <Link to={`/project/${id}`}>
           <img className={"image fade"} src={image} alt={name} />
           <div className="figure-text">
@@ -33,8 +35,6 @@ const Image = (props) => {
             <p style={{ fontSize: "14px", marginTop: "3px" }}>{genre}</p>
           </div>
         </Link>
-      ) : (
-        <img className={"image"} src={image} alt={name} />
       )}
     </figure>
   );

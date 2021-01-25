@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Project from "../pages/Project";
 import Grid from "./Grid";
+import TextBody from "./TextBody";
 
 const Body = (props) => {
   const { data } = props;
@@ -12,7 +13,16 @@ const Body = (props) => {
     <Switch>
       {data.pages.hlinks.map((hlink) => (
         <Route exact path={`/${hlink.name}`}>
-          {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}
+          <>
+            {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}
+            {(hlink.title || hlink.subtitle || hlink.text) && (
+              <TextBody
+                title={hlink.title || ""}
+                subtitle={hlink.subtitle || ""}
+                text={hlink.text || ""}
+              />
+            )}
+          </>
         </Route>
       ))}
       <Route exact path="/project/:cubeId">
