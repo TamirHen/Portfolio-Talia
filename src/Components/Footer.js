@@ -7,9 +7,7 @@ const Footer = (props) => {
     <footer>
       <section className="upper footer-section">
         {props.data.footerText.split("\n").map((line) => (
-          <>
-            <p className="text-line">{line}</p>
-          </>
+          <p className="text-line">{line}</p>
         ))}
       </section>
       <section className="lower footer-section">

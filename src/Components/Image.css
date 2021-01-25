@@ -8,7 +8,6 @@
 
 figure {
   position: relative;
-  cursor: pointer;
 }
 
 .figure-text {
@@ -25,7 +24,7 @@ figure {
   opacity: 0;
 }
 
-.image:hover + .figure-text {
+.fade:hover + .figure-text {
   opacity: 1;
 }
 .image {
@@ -35,6 +34,6 @@ figure {
   transition: opacity 400ms;
 }
 
-.image:hover {
+.fade:hover {
   opacity: 0.1;
 }

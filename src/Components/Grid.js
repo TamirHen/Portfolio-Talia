@@ -4,12 +4,11 @@ import React from "react";
 import Image from "./Image";
 
 const Grid = (props) => {
-  const { data, page, cubeId } = props;
+  const { data, page } = props;
   const gridRows = data.pages[page].grid.rows;
   const gridColumns = data.pages[page].grid.columns;
-  const image = data.pages[page].images?.find(
-    (image) => image.imageId == cubeId
-  );
+  const images = data.pages[page].images;
+  // const image = images?.find((image) => image.cubeId == cubeId);
 
   const style = {
     gallery: {
@@ -21,9 +20,44 @@ const Grid = (props) => {
     },
   };
 
+  const pageRender = () => {
+    console.log(images);
+    switch (page) {
+      case "home":
+        return images?.map(
+          (image) =>
+            data.cubes.find((cube) => cube.id == image.cubeId) && (
+              <Image
+                key={image.cubeId}
+                {...image}
+                {...data.cubes.find((cube) => cube.id == image.cubeId)}
+                page={page}
+              />
+            )
+        );
+
+      case "project":
+        return images.find(
+          (image) =>
+            image.cubeId === data.cubes.id && (
+              <Image
+                key={image.cubeId}
+                {...image}
+                {...data.cubes.find((cube) => cube.id == image.cubeId)}
+                page={page}
+              />
+            )
+        );
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div style={style.gallery}>
-      {image && page !== "home"
+      {pageRender()}
+      {/* {image && page !== "home"
         ? data.cubes.map(
             (cube) =>
               cubeId == cube.id && (
@@ -36,12 +70,12 @@ const Grid = (props) => {
                     gridColumnEnd: image.columnEnd,
                   }}
                 >
-                  <img src={cube.image} alt={cube.name} />
+                  <img className="image" src={cube.image} alt={cube.name} />
                 </figure>
               )
           )
         : page === "home" &&
-          data.cubes.map((cube) => <Image key={cube.id} {...cube} />)}
+          data.pages.map((cube) => <Image key={cube.id} {...cube} />)} */}
     </div>
   );
 };
