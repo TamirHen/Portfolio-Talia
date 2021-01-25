@@ -113,9 +113,9 @@ function App() {
           {
             cubeId: 2,
             rowStart: 1,
-            rowEnd: 9,
-            columnStart: 1,
-            columnEnd: 10,
+            rowEnd: 8,
+            columnStart: 2,
+            columnEnd: 9,
           },
           {
             cubeId: 3,

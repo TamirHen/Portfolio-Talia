@@ -4,11 +4,10 @@ import React from "react";
 import Image from "./Image";
 
 const Grid = (props) => {
-  const { data, page } = props;
+  const { data, page, cubeId } = props;
   const gridRows = data.pages[page].grid.rows;
   const gridColumns = data.pages[page].grid.columns;
   const images = data.pages[page].images;
-  // const image = images?.find((image) => image.cubeId == cubeId);
 
   const style = {
     gallery: {
@@ -21,7 +20,6 @@ const Grid = (props) => {
   };
 
   const pageRender = () => {
-    console.log(images);
     switch (page) {
       case "home":
         return images?.map(
@@ -37,9 +35,9 @@ const Grid = (props) => {
         );
 
       case "project":
-        return images.find(
+        return images.map(
           (image) =>
-            image.cubeId === data.cubes.id && (
+            image.cubeId == cubeId && (
               <Image
                 key={image.cubeId}
                 {...image}
@@ -54,30 +52,7 @@ const Grid = (props) => {
     }
   };
 
-  return (
-    <div style={style.gallery}>
-      {pageRender()}
-      {/* {image && page !== "home"
-        ? data.cubes.map(
-            (cube) =>
-              cubeId == cube.id && (
-                <figure
-                  style={{
-                    cursor: "default",
-                    gridRowStart: image.rowStart || 1,
-                    gridRowEnd: image.rowEnd,
-                    gridColumnStart: image.columnStart,
-                    gridColumnEnd: image.columnEnd,
-                  }}
-                >
-                  <img className="image" src={cube.image} alt={cube.name} />
-                </figure>
-              )
-          )
-        : page === "home" &&
-          data.pages.map((cube) => <Image key={cube.id} {...cube} />)} */}
-    </div>
-  );
+  return <div style={style.gallery}>{pageRender()}</div>;
 };
 
 export default Grid;
