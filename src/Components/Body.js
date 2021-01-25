@@ -1,15 +1,14 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
+import Project from "../pages/Project";
 
 const Body = (props) => {
   return (
     <Switch>
-      <Route exact path="/project/:name">
-        <div>
-          <Link to="/">project</Link>
-        </div>
+      <Route exact path="/project/:cubeId">
+        <Project {...props} />
       </Route>
       <Route path="/">
         <Home {...props} />

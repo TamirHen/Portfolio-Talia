@@ -5,6 +5,7 @@ import "./Image.css";
 
 const Image = (props) => {
   const {
+    id,
     image,
     name,
     genre,
@@ -22,7 +23,7 @@ const Image = (props) => {
         gridColumnEnd: columnEnd,
       }}
     >
-      <Link to={`/project/${name}`}>
+      <Link to={`/project/${id}`}>
         <img className="image" src={image} alt={name} />
         <div className="figure-text">
           <p style={{ fontWeight: "bold" }}>{name}</p>
