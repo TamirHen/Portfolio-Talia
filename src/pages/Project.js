@@ -16,6 +16,7 @@ const Project = (props) => {
         title={cube.name}
         subtitle={cube.genre}
         text={cube.description}
+        data={data}
       />
     </>
   );

@@ -8,7 +8,6 @@ import TextBody from "./TextBody";
 
 const Body = (props) => {
   const { data } = props;
-  console.log(data.pages.hlinks);
   return (
     <Switch>
       {data.pages.hlinks.map((hlink) => (
@@ -23,6 +22,7 @@ const Body = (props) => {
                 title={hlink.title || ""}
                 subtitle={hlink.subtitle || ""}
                 text={hlink.text || ""}
+                data={data}
               />
             )}
           </>

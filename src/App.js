@@ -58,6 +58,14 @@ function App() {
         grid: {
           rows: 8,
           columns: 8,
+          mobile: {
+            rows: 12,
+            columns: 8,
+          },
+          tablet: {
+            rows: 12,
+            columns: 8,
+          },
         },
         images: [
           {
@@ -66,6 +74,18 @@ function App() {
             rowEnd: 7,
             columnStart: 1,
             columnEnd: 6,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 9,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 9,
+            },
           },
           {
             cubeId: 2,
@@ -73,6 +93,18 @@ function App() {
             rowEnd: 4,
             columnStart: 6,
             columnEnd: 9,
+            mobile: {
+              rowStart: 4,
+              rowEnd: 8,
+              columnStart: 1,
+              columnEnd: 9,
+            },
+            tablet: {
+              rowStart: 4,
+              rowEnd: 8,
+              columnStart: 1,
+              columnEnd: 9,
+            },
           },
           {
             cubeId: 3,
@@ -80,27 +112,71 @@ function App() {
             rowEnd: 7,
             columnStart: 6,
             columnEnd: 9,
+            mobile: {
+              rowStart: 8,
+              rowEnd: 12,
+              columnStart: 1,
+              columnEnd: 9,
+            },
+            tablet: {
+              rowStart: 8,
+              rowEnd: 12,
+              columnStart: 1,
+              columnEnd: 9,
+            },
           },
-          {
-            cubeId: 4,
-            rowStart: 7,
-            rowEnd: 11,
-            columnStart: 1,
-            columnEnd: 5,
-          },
-          {
-            cubeId: 5,
-            rowStart: 7,
-            rowEnd: 11,
-            columnStart: 5,
-            columnEnd: 9,
-          },
+          // {
+          //   cubeId: 4,
+          //   rowStart: 7,
+          //   rowEnd: 11,
+          //   columnStart: 1,
+          //   columnEnd: 5,
+          //   mobile: {
+          //     rowStart: 0,
+          //     rowEnd: 0,
+          //     columnStart: 0,
+          //     columnEnd: 0,
+          //   },
+          //   tablet: {
+          //     rowStart: 0,
+          //     rowEnd: 0,
+          //     columnStart: 0,
+          //     columnEnd: 0,
+          //   },
+          // },
+          // {
+          //   cubeId: 5,
+          //   rowStart: 7,
+          //   rowEnd: 11,
+          //   columnStart: 5,
+          //   columnEnd: 9,
+          //   mobile: {
+          //     rowStart: 0,
+          //     rowEnd: 0,
+          //     columnStart: 0,
+          //     columnEnd: 0,
+          //   },
+          //   tablet: {
+          //     rowStart: 0,
+          //     rowEnd: 0,
+          //     columnStart: 0,
+          //     columnEnd: 0,
+          //   },
+          // },
         ],
       },
       project: {
         grid: {
           rows: 8,
           columns: 9,
+          mobile: {
+            rows: 8,
+            columns: 2,
+          },
+          tablet: {
+            rows: 8,
+            columns: 4,
+          },
         },
         images: [
           {
@@ -109,6 +185,18 @@ function App() {
             rowEnd: 9,
             columnStart: 1,
             columnEnd: 10,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 2,
+              columnStart: 1,
+              columnEnd: 2,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
           },
           {
             cubeId: 2,
@@ -116,6 +204,18 @@ function App() {
             rowEnd: 8,
             columnStart: 2,
             columnEnd: 9,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 2,
+              columnStart: 1,
+              columnEnd: 2,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
           },
           {
             cubeId: 3,
@@ -123,6 +223,18 @@ function App() {
             rowEnd: 9,
             columnStart: 1,
             columnEnd: 10,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 2,
+              columnStart: 1,
+              columnEnd: 2,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
           },
           {
             cubeId: 4,
@@ -130,6 +242,18 @@ function App() {
             rowEnd: 9,
             columnStart: 1,
             columnEnd: 10,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 2,
+              columnStart: 1,
+              columnEnd: 2,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
           },
           {
             cubeId: 5,
@@ -137,6 +261,18 @@ function App() {
             rowEnd: 9,
             columnStart: 1,
             columnEnd: 10,
+            mobile: {
+              rowStart: 1,
+              rowEnd: 2,
+              columnStart: 1,
+              columnEnd: 2,
+            },
+            tablet: {
+              rowStart: 1,
+              rowEnd: 4,
+              columnStart: 1,
+              columnEnd: 4,
+            },
           },
         ],
       },
@@ -145,8 +281,16 @@ function App() {
           name: "Film",
           header: "Film",
           grid: {
-            rows: 8,
+            rows: 10,
             columns: 8,
+            mobile: {
+              rows: 12,
+              columns: 8,
+            },
+            tablet: {
+              rows: 12,
+              columns: 8,
+            },
           },
           images: [
             {
@@ -155,6 +299,18 @@ function App() {
               rowEnd: 6,
               columnStart: 1,
               columnEnd: 5,
+              mobile: {
+                rowStart: 1,
+                rowEnd: 4,
+                columnStart: 1,
+                columnEnd: 9,
+              },
+              tablet: {
+                rowStart: 1,
+                rowEnd: 5,
+                columnStart: 1,
+                columnEnd: 9,
+              },
             },
             {
               cubeId: 1,
@@ -162,21 +318,57 @@ function App() {
               rowEnd: 9,
               columnStart: 5,
               columnEnd: 9,
+              mobile: {
+                rowStart: 4,
+                rowEnd: 8,
+                columnStart: 1,
+                columnEnd: 9,
+              },
+              tablet: {
+                rowStart: 5,
+                rowEnd: 10,
+                columnStart: 1,
+                columnEnd: 9,
+              },
             },
-            {
-              cubeId: 3,
-              rowStart: 1,
-              rowEnd: 4,
-              columnStart: 5,
-              columnEnd: 9,
-            },
-            {
-              cubeId: 4,
-              rowStart: 6,
-              rowEnd: 9,
-              columnStart: 1,
-              columnEnd: 5,
-            },
+            // {
+            //   cubeId: 3,
+            //   rowStart: 1,
+            //   rowEnd: 4,
+            //   columnStart: 5,
+            //   columnEnd: 9,
+            //   mobile: {
+            //     rowStart: 0,
+            //     rowEnd: 0,
+            //     columnStart: 0,
+            //     columnEnd: 0,
+            //   },
+            //   tablet: {
+            //     rowStart: 0,
+            //     rowEnd: 0,
+            //     columnStart: 0,
+            //     columnEnd: 0,
+            //   },
+            // },
+            // {
+            //   cubeId: 4,
+            //   rowStart: 6,
+            //   rowEnd: 9,
+            //   columnStart: 1,
+            //   columnEnd: 5,
+            //   mobile: {
+            //     rowStart: 0,
+            //     rowEnd: 0,
+            //     columnStart: 0,
+            //     columnEnd: 0,
+            //   },
+            //   tablet: {
+            //     rowStart: 0,
+            //     rowEnd: 0,
+            //     columnStart: 0,
+            //     columnEnd: 0,
+            //   },
+            // },
           ],
         },
         {
@@ -278,6 +470,10 @@ function App() {
         },
       ],
     },
+    breakPoints: {
+      mobile: "600px",
+      tablet: "1200px",
+    },
   };
 
   const style = {
@@ -293,7 +489,7 @@ function App() {
     <Router>
       <Switch>
         <div style={style.mainContainer}>
-          <div style={{ padding: "0px 115px" }}>
+          <div style={{ padding: "0px 6.94%" }}>
             <Header data={DUMMY_DATA} />
             <Route path="/">
               <Body data={DUMMY_DATA} />
