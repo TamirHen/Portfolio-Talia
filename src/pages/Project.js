@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import React from "react";
-import Grid from "../Components/Grid";
-import TextBody from "../Components/TextBody";
+import Grid from "../components/Grid";
+import TextBody from "../components/TextBody";
 import { useParams } from "react-router-dom";
 
 const Project = (props) => {

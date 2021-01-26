@@ -1,8 +1,9 @@
 import React from "react";
-import Header from "./Components/Header";
-import Body from "./Components/Body";
-import Footer from "./Components/Footer";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const DUMMY_DATA = {
@@ -473,8 +474,13 @@ function App() {
     breakPoints: {
       mobile: "600px",
       tablet: "1200px",
+      menu: "800px",
     },
   };
+
+  const isMobile = useMediaQuery({
+    query: `(max-width: ${DUMMY_DATA.breakPoints.mobile || "600px"})`,
+  });
 
   const style = {
     mainContainer: {
@@ -489,8 +495,8 @@ function App() {
     <Router>
       <Switch>
         <div style={style.mainContainer}>
-          <div style={{ padding: "0px 6.94%" }}>
-            <Header data={DUMMY_DATA} />
+          <Header data={DUMMY_DATA} />
+          <div style={{ padding: `0px ${isMobile ? "0px" : "6.94%"}` }}>
             <Route path="/">
               <Body data={DUMMY_DATA} />
             </Route>
