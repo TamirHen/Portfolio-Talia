@@ -143,6 +143,7 @@ function App() {
       hlinks: [
         {
           name: "Film",
+          header: "Film",
           grid: {
             rows: 8,
             columns: 8,
@@ -205,6 +206,7 @@ function App() {
         },
         {
           name: "Design",
+          header: "Design",
           grid: {
             rows: 8,
             columns: 8,
@@ -278,10 +280,19 @@ function App() {
     },
   };
 
+  const style = {
+    mainContainer: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "100vh",
+    },
+  };
+
   return (
     <Router>
       <Switch>
-        <>
+        <div style={style.mainContainer}>
           <div style={{ padding: "0px 115px" }}>
             <Header data={DUMMY_DATA} />
             <Route path="/">
@@ -289,7 +300,7 @@ function App() {
             </Route>
           </div>
           <Footer data={DUMMY_DATA} />
-        </>
+        </div>
       </Switch>
     </Router>
   );

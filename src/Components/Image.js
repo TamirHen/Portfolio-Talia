@@ -22,7 +22,6 @@ const Image = (props) => {
         gridRowEnd: rowEnd,
         gridColumnStart: columnStart,
         gridColumnEnd: columnEnd,
-        // cursor: page === "home" ? "pointer" : "unset",
       }}
     >
       {page === "project" ? (
