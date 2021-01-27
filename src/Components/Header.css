@@ -17,12 +17,13 @@ a {
   text-decoration: inherit;
 }
 
-.header {
+header {
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 6.94%;
+  /* padding: 0px 6.94%; */
+  position: relative;
 }
 
 .header-links {
@@ -35,4 +36,29 @@ a {
 
 .header-link {
   padding: 0px 9px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 6.94%;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  background-color: white;
+  max-height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.open {
+  visibility: visible;
+  max-height: fit-content;
+}
+
+.mobile-nav li {
+  padding: 15px 10px;
 }
