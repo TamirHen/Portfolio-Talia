@@ -16,6 +16,7 @@ const Body = (props) => {
             {hlink.header && (
               <h4 style={{ margin: "50px, 0px, 30px, 0px" }}>{hlink.header}</h4>
             )}
+
             {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}
             {(hlink.title || hlink.subtitle || hlink.text) && (
               <TextBody

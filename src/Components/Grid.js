@@ -32,9 +32,6 @@ const Grid = (props) => {
       gridTemplateColumns: `repeat(${gridColumns || 8}, 1fr)`,
       gridGap: "15px",
       margin: "15px 0px",
-      position: isMobile && "absolute",
-      left: isMobile && "0px",
-      right: isMobile && "0px",
     },
   };
 

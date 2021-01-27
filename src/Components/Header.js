@@ -13,19 +13,29 @@ const Header = (props) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const getLinks = () => {
     return (
-      <ul
-        className={
-          isShrinkMenu
-            ? `mobile-nav ${isMenuActive ? "open" : "close"}`
-            : "header-links"
-        }
-      >
-        {data.headerLinks.map((link) => (
-          <li className="header-link" id={`link-${link}`}>
-            <NavLink to={`/${link}`}>{link}</NavLink>
-          </li>
-        ))}
-      </ul>
+      <>
+        {isMenuActive && (
+          <div
+            className="grey-screen"
+            onClick={() => setIsMenuActive(false)}
+          ></div>
+        )}
+        <ul
+          className={
+            isShrinkMenu
+              ? `mobile-nav ${isMenuActive ? "open" : "close"}`
+              : "header-links"
+          }
+        >
+          {data.headerLinks.map((link) => (
+            <li className="header-link" id={`link-${link}`}>
+              <NavLink onClick={() => setIsMenuActive(false)} to={`/${link}`}>
+                {link}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </>
     );
   };
 
@@ -43,7 +53,6 @@ const Header = (props) => {
             size="24"
             toggled={isMenuActive}
             toggle={setIsMenuActive}
-            onToggle={() => {}}
           />
         ) : (
           <nav>{getLinks()}</nav>
