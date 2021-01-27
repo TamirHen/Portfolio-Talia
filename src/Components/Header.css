@@ -48,17 +48,30 @@ header {
   right: 0px;
   z-index: 1;
   background-color: white;
-  max-height: 0px;
+  transition: all 1s;
+}
+
+.close {
   visibility: hidden;
   overflow: hidden;
-  transition: max-height 1s ease;
+  max-height: 0%;
 }
 
 .open {
+  max-height: 100%;
   visibility: visible;
-  max-height: fit-content;
+  overflow: auto;
 }
 
 .mobile-nav li {
-  padding: 15px 10px;
+  padding: 5px 10px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.mobile-nav a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }

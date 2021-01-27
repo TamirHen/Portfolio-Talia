@@ -15,7 +15,9 @@ const Header = (props) => {
     return (
       <ul
         className={
-          isShrinkMenu ? `mobile-nav ${isMenuActive && "open"}` : "header-links"
+          isShrinkMenu
+            ? `mobile-nav ${isMenuActive ? "open" : "close"}`
+            : "header-links"
         }
       >
         {data.headerLinks.map((link) => (
@@ -47,7 +49,7 @@ const Header = (props) => {
           <nav>{getLinks()}</nav>
         )}
       </header>
-      {isMenuActive && isShrinkMenu && <nav>{getLinks()}</nav>}
+      {isShrinkMenu && <nav>{getLinks()}</nav>}
     </>
   );
 };
