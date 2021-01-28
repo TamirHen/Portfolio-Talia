@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import uuid from "react-uuid";
 
 const TextBody = (props) => {
   const { data, title, subtitle, text } = props;
@@ -19,7 +20,9 @@ const TextBody = (props) => {
         style={{ fontSize: isMobile ? "13px" : "15px", marginTop: "30px" }}
       >
         {text.split("\n").map((line) => (
-          <p className="text-line">{line}</p>
+          <p key={uuid()} className="text-line">
+            {line}
+          </p>
         ))}
       </div>
     </div>

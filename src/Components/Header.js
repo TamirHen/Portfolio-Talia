@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { NavLink } from "react-router-dom";
 import Hamburger from "hamburger-react";
+import uuid from "react-uuid";
 
 import "./Header.css";
 
 const Header = (props) => {
   const { data } = props;
   const isShrinkMenu = useMediaQuery({
-    query: `(max-width: ${data.breakPoints.menu || "800px"})`,
+    query: `(max-width: ${data.breakPoints?.menu || "800px"})`,
   });
   const [isMenuActive, setIsMenuActive] = useState(false);
   const getLinks = () => {
@@ -28,7 +29,7 @@ const Header = (props) => {
           }
         >
           {data.headerLinks.map((link) => (
-            <li className="header-link" id={`link-${link}`}>
+            <li key={uuid()} className="header-link" id={`link-${link}`}>
               <NavLink onClick={() => setIsMenuActive(false)} to={`/${link}`}>
                 {link}
               </NavLink>

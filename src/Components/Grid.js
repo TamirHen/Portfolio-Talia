@@ -1,6 +1,7 @@
 /* eslint-disable eqeqeq */
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import uuid from "react-uuid";
 
 import Image from "./Image";
 
@@ -42,7 +43,7 @@ const Grid = (props) => {
           (image) =>
             data.cubes.find((cube) => cube.id == image.cubeId) && (
               <Image
-                key={image.cubeId}
+                key={uuid()}
                 {...image}
                 {...((isMobile && image.mobile) || (isTablet && image.tablet))}
                 {...data.cubes.find((cube) => cube.id == image.cubeId)}
@@ -56,7 +57,7 @@ const Grid = (props) => {
           (image) =>
             image.cubeId == cubeId && (
               <Image
-                key={image.cubeId}
+                key={uuid()}
                 {...image}
                 {...((isMobile && image.mobile) || (isTablet && image.tablet))}
                 {...data.cubes.find((cube) => cube.id == image.cubeId)}
@@ -71,7 +72,7 @@ const Grid = (props) => {
           (image) =>
             data.cubes.find((cube) => cube.id == image.cubeId) && (
               <Image
-                key={image.cubeId}
+                key={uuid()}
                 {...image}
                 {...((isMobile && image.mobile) || (isTablet && image.tablet))}
                 {...data.cubes.find((cube) => cube.id == image.cubeId)}

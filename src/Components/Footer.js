@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "react-uuid";
 
 import "./Footer.css";
 
@@ -7,7 +8,9 @@ const Footer = (props) => {
     <footer>
       <section className="upper footer-section">
         {props.data.footerText.split("\n").map((line) => (
-          <p className="text-line">{line}</p>
+          <p className="text-line" key={uuid()}>
+            {line}
+          </p>
         ))}
       </section>
       <section className="lower footer-section">
