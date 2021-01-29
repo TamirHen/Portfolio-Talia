@@ -1,10 +1,10 @@
 import React, { Component, createContext } from "react";
 import { db } from "../utils/Firebase";
 
-export const DataContext = createContext({ data: "null" });
+export const DataContext = createContext({ data: null });
 class DataProvider extends Component {
   state = {
-    data: "null",
+    data: null,
   };
 
   componentDidMount = () => {
@@ -13,7 +13,6 @@ class DataProvider extends Component {
         this.setState({
           data: snapshot.val(),
         });
-        console.log(this.state.data);
       })
       .catch((error) => {
         console.error("Error: " + error.code);
