@@ -1,12 +1,12 @@
 {
     "firebaseConfig": {
-        "apiKey": "AIzaSyBgRPQJepUbjs9xA4eQ5e7J04Yqk-_uhYA",
-        "authDomain": "portfolio-th.firebaseapp.com",
-        "databaseURL": "https://portfolio-th-default-rtdb.firebaseio.com",
-        "projectId": "portfolio-th",
-        "storageBucket": "portfolio-th.appspot.com",
-        "messagingSenderId": "797056371825",
-        "appId": "1:797056371825:web:3ef99482e899ec436f5fd0",
-        "measurementId": "G-QFW6YY3VYW"
+        "apiKey": "AIzaSyBju_GUG_SCO2JHh1M_aYL8kjByJCvY064",
+        "authDomain": "talia-breuer.firebaseapp.com",
+        "databaseURL": "https://talia-breuer-default-rtdb.firebaseio.com",
+        "projectId": "talia-breuer",
+        "storageBucket": "talia-breuer.appspot.com",
+        "messagingSenderId": "497277188713",
+        "appId": "1:497277188713:web:447d9bae788b1d84ca80f8",
+        "measurementId": "G-RM0QXTL29J"
     }
 }

@@ -7,7 +7,7 @@ import uuid from "react-uuid";
 import "./Header.css";
 
 const Header = (props) => {
-  const { data } = props;
+  const { data, padding } = props;
   const isShrinkMenu = useMediaQuery({
     query: `(max-width: ${data.breakPoints?.menu || "800px"})`,
   });
@@ -42,7 +42,7 @@ const Header = (props) => {
 
   return (
     <>
-      <header className="header">
+      <header className="header" style={{padding: padding}}>
         <div className="text-header">
           <NavLink to="/">
             <h4>{data.title}</h4>

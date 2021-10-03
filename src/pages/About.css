@@ -1,0 +1,13 @@
+.cv-link {
+  color: white;
+  background: black;
+  padding: 15px 10px 3px;
+  border-radius: 2px;
+
+}
+
+.open-cv-txt {
+  position: relative;
+  top: -7px;
+  margin-right: 10px;
+}
