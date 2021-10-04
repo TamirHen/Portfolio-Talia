@@ -7,36 +7,43 @@ import Project from "../pages/Project";
 import Grid from "./Grid";
 import TextBody from "./TextBody";
 import About from "../pages/About";
+import Contact from "../pages/Contact";
 
 const Body = (props) => {
     const {data} = props;
 
     return (
         <Switch>
-            {data.pages.hlinks.map((hlink) => (
-                hlink.name === 'About' ?
-                    <Route exact path={`/${hlink.name}`} key={uuid()}>
-                        <About data={data}/>
-                    </Route>
-                    :
-                    <Route exact path={`/${hlink.name}`} key={uuid()}>
-                        <>
-                            {hlink.header && (
-                                <h4 style={{margin: "50px, 0px, 30px, 0px"}}>{hlink.header}</h4>
-                            )}
+            {/*{data.pages.hlinks.map((hlink) => (*/}
+            {/*    hlink.name === 'About' ?*/}
+            {/*        <Route exact path={`/${hlink.name}`} key={uuid()}>*/}
+            {/*            <About data={data}/>*/}
+            {/*        </Route>*/}
+            {/*        :*/}
+            {/*        <Route exact path={`/${hlink.name}`} key={uuid()}>*/}
+            {/*            <>*/}
+            {/*                {hlink.header && (*/}
+            {/*                    <h4 style={{margin: "50px, 0px, 30px, 0px"}}>{hlink.header}</h4>*/}
+            {/*                )}*/}
 
-                            {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}
-                            {(hlink.title || hlink.subtitle || hlink.text) && (
-                                <TextBody
-                                    title={hlink.title || ""}
-                                    subtitle={hlink.subtitle || ""}
-                                    text={hlink.text || ""}
-                                    data={data}
-                                />
-                            )}
-                        </>
-                    </Route>
-            ))}
+            {/*                {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}*/}
+            {/*                {(hlink.title || hlink.subtitle || hlink.text) && (*/}
+            {/*                    <TextBody*/}
+            {/*                        title={hlink.title || ""}*/}
+            {/*                        subtitle={hlink.subtitle || ""}*/}
+            {/*                        text={hlink.text || ""}*/}
+            {/*                        data={data}*/}
+            {/*                    />*/}
+            {/*                )}*/}
+            {/*            </>*/}
+            {/*        </Route>*/}
+            {/*))}*/}
+            <Route exact path={`/about`} key={uuid()}>
+                <About data={data}/>
+            </Route>
+            <Route exact path={`/contact`} key={uuid()}>
+                <Contact data={data}/>
+            </Route>
             <Route exact path="/project/:cubeId">
                 <Project {...props} />
             </Route>

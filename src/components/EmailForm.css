@@ -1,0 +1,38 @@
+
+.contact-form {
+    margin: 15px 0;
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form-control {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.btn-submit {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 23px;
+    cursor: pointer;
+    transition: all 150ms linear;
+}
+
+.btn-submit:hover {
+    opacity: .8;
+}
+
+.success-message {
+    margin: 20px 0;
+    font-size: 18px;
+}
