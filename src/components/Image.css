@@ -31,9 +31,9 @@ figure {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 400ms;
+  /*transition: opacity 400ms;*/
 }
 
-.fade:hover {
-  opacity: 0.1;
-}
+/*.fade:hover {*/
+/*  opacity: 0.1;*/
+/*}*/

@@ -29,10 +29,10 @@ const Image = (props) => {
       ) : (
         <Link to={`/project/${id}`}>
           <img className={"image fade"} src={image} alt={name} />
-          <div className="figure-text">
-            <p style={{ fontWeight: "bold" }}>{name}</p>
-            <p style={{ fontSize: "14px", marginTop: "3px" }}>{genre}</p>
-          </div>
+          {/*<div className="figure-text">*/}
+          {/*  <p style={{ fontWeight: "bold" }}>{name}</p>*/}
+          {/*  <p style={{ fontSize: "14px", marginTop: "3px" }}>{genre}</p>*/}
+          {/*</div>*/}
         </Link>
       )}
     </figure>

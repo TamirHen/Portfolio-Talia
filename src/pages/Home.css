@@ -1,0 +1,36 @@
+
+.home-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.home-btn-wrapper {
+    padding: 5%;
+    text-align: center;
+}
+
+.home-btn-wrapper h2{
+    font-size: 30px;
+}
+
+.home-btn {
+    width: 100%;
+    max-height: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 150ms linear;
+    margin-bottom: 25px;
+}
+
+.home-btn:hover {
+    transform: scale(.9);
+}
+
+@media only screen and (max-width: 1000px) {
+    .home-btn-wrapper h2{
+        font-size: 24px;
+    }
+}
