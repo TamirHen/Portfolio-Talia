@@ -12,7 +12,12 @@ function Contact({data}) {
 
     return (
         <div className={"contact-container"}>
-            <h2 className={"contact-header"}>Contact</h2>
+            {
+                data && <>
+                    <h2 className={"contact-header"}>{data.pages.contact.title}</h2>
+                    <p>{data.pages.contact.text}</p>
+                </>
+            }
             <EmailForm/>
         </div>
     );
