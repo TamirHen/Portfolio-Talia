@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.home-btn-wrapper h2{
+.home-btn-wrapper h2 {
     font-size: 30px;
 }
 
@@ -30,7 +30,11 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .home-btn-wrapper h2{
+    .home-btn-wrapper h2 {
         font-size: 24px;
+    }
+
+    .home-btn:hover {
+        transform: none;
     }
 }
