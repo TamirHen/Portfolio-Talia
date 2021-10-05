@@ -38,6 +38,12 @@ const Body = (props) => {
             {/*            </>*/}
             {/*        </Route>*/}
             {/*))}*/}
+            <Route exact path={`/animation`} key={uuid()}>
+                Animation page
+            </Route>
+            <Route exact path={`/rigging`} key={uuid()}>
+                Rigging page
+            </Route>
             <Route exact path={`/about`} key={uuid()}>
                 <About data={data}/>
             </Route>

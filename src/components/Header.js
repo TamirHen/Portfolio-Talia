@@ -30,7 +30,7 @@ const Header = (props) => {
         >
           {data.headerLinks.map((link) => (
             <li key={uuid()} className="header-link" id={`link-${link}`}>
-              <NavLink onClick={() => setIsMenuActive(false)} to={`/${link}`}>
+              <NavLink onClick={() => setIsMenuActive(false)} to={`/${link.charAt(0).toLowerCase() + link.slice(1)}`}>
                 {link}
               </NavLink>
             </li>
