@@ -1,13 +1,13 @@
 
 .social-media-wrapper {
     display: flex;
+    max-width: 15rem;
 }
 
 .icon-wrapper {
     height: 25px;
     width: auto;
     margin: 10px;
-
     transition: transform 150ms linear;
 }
 

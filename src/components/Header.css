@@ -26,6 +26,11 @@ header {
   /*box-shadow: 1px 1px 7px 0px #a7a7a7;*/
 }
 
+.logo-icon {
+  width: 140px;
+  height: auto;
+}
+
 .header-links {
   display: flex;
   justify-content: center;

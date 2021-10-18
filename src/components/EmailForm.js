@@ -2,7 +2,6 @@ import React, {useRef, useState} from 'react';
 import emailjs from 'emailjs-com';
 import './EmailForm.css';
 
-
 function EmailForm(props) {
 
     const [form, setForm] = useState({
