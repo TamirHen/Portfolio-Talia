@@ -1,5 +1,5 @@
 html {
-    background-color: #fff8ec;
+    background-color: #ffffff;
 }
 
 body {
@@ -7,7 +7,7 @@ body {
     font-family: 'Maven Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #31009b;
+    color: #8C429E;
 }
 
 code {
@@ -20,7 +20,7 @@ textarea, input {
 }
 
 button[type=submit] {
-    background-color: #31009b;
+    background-color: #8C429E;
 }
 
 .container-body {

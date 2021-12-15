@@ -1,0 +1,11 @@
+.demo-reel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-reel-iframe {
+    margin-top: 30px;
+    max-width: 1000px;
+    width: 100%;
+}

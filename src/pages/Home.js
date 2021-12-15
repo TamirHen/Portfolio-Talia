@@ -27,6 +27,12 @@ const Home = (props) => {
                     <h2>Rigging</h2>
                 </Link>
             </div>
+            <div className={"home-btn-wrapper"}>
+                <Link to={"/sketches"}>
+                    <img className={"home-btn"} src={data.pages.home.sketchesImage} alt={"Sketches"}/>
+                    <h2>Sketches</h2>
+                </Link>
+            </div>
         </div>
     );
 };

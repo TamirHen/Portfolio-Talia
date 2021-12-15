@@ -8,6 +8,7 @@ import {ReactComponent as LogoIcon} from "../assets/logo_name.svg";
 
 const Header = (props) => {
     const {data, padding} = props;
+    const {headerLinks} = data;
     const isShrinkMenu = useMediaQuery({
         query: `(max-width: ${data.breakPoints?.menu || "800px"})`,
     });
@@ -28,14 +29,18 @@ const Header = (props) => {
                             : "header-links"
                     }
                 >
-                    {data.headerLinks.map((link) => (
-                        <li key={uuid()} className="header-link" id={`link-${link}`}>
-                            <NavLink onClick={() => setIsMenuActive(false)}
-                                     to={`/${link.charAt(0).toLowerCase() + link.slice(1)}`}>
-                                {link}
-                            </NavLink>
-                        </li>
-                    ))}
+                    {headerLinks && Object.keys(headerLinks)
+                        .sort((a, b) => headerLinks[a].order - headerLinks[b].order)
+                        .map((key, index) => (
+                            <li key={uuid()} className="header-link"
+                                id={`link-${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
+                                <NavLink activeStyle={{color: "#1D3EC3"}} onClick={() => setIsMenuActive(false)}
+                                         to={`/${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
+                                    {headerLinks[key].name}
+                                </NavLink>
+                            </li>
+                        )
+                    )}
                 </ul>
             </>
         );

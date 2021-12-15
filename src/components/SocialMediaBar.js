@@ -11,36 +11,54 @@ function SocialMediaBar({socialMediaData}) {
     const {behance, dribble, instagram, linkedin, vimeo, whatsapp} = socialMediaData;
     return (
         <div className={"social-media-wrapper"}>
-            <div className={"icon-wrapper"}>
-                <a href={behance} target="_blank">
-                    <BehanceIcon/>
-                </a>
-            </div>
-            <div className={"icon-wrapper"}>
-                <a href={dribble} target="_blank">
-                    <DribbleIcon/>
-                </a>
-            </div>
-            <div className={"icon-wrapper"}>
-                <a href={instagram} target="_blank">
-                    <InstagramIcon/>
-                </a>
-            </div>
-            <div className={"icon-wrapper"}>
-                <a href={linkedin} target="_blank">
-                    <LinkedinIcon/>
-                </a>
-            </div>
-            <div className={"icon-wrapper"}>
-                <a href={vimeo} target="_blank">
-                    <VimeoIcon/>
-                </a>
-            </div>
-            <div className={"icon-wrapper"}>
-                <a href={whatsapp} target="_blank">
-                    <WhatsappIcon/>
-                </a>
-            </div>
+            {
+                behance &&
+                <div className={"icon-wrapper"}>
+                    <a href={behance} target="_blank">
+                        <BehanceIcon/>
+                    </a>
+                </div>
+            }
+            {
+                dribble &&
+                <div className={"icon-wrapper"}>
+                    <a href={dribble} target="_blank">
+                        <DribbleIcon/>
+                    </a>
+                </div>
+            }
+            {
+                instagram &&
+                <div className={"icon-wrapper"}>
+                    <a href={instagram} target="_blank">
+                        <InstagramIcon/>
+                    </a>
+                </div>
+            }
+            {
+                linkedin &&
+                <div className={"icon-wrapper"}>
+                    <a href={linkedin} target="_blank">
+                        <LinkedinIcon/>
+                    </a>
+                </div>
+            }
+            {
+                vimeo &&
+                <div className={"icon-wrapper"}>
+                    <a href={vimeo} target="_blank">
+                        <VimeoIcon/>
+                    </a>
+                </div>
+            }
+            {
+                whatsapp &&
+                <div className={"icon-wrapper"}>
+                    <a href={whatsapp} target="_blank">
+                        <WhatsappIcon/>
+                    </a>
+                </div>
+            }
         </div>
     );
 }

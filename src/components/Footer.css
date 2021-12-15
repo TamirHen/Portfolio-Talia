@@ -3,7 +3,7 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(235, 223, 203, 0.37);
+  background-color: #fff8eb;
 }
 
 .footer-section {

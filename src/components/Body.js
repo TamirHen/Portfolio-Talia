@@ -7,6 +7,7 @@ import Grid from "./Grid";
 import TextBody from "./TextBody";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import DemoReel from "../pages/DemoReel";
 
 const Body = (props) => {
     const {data} = props;
@@ -48,6 +49,9 @@ const Body = (props) => {
             </Route>
             <Route exact path={`/contact`} key={uuid()}>
                 <Contact data={data}/>
+            </Route>
+            <Route exact path={`/demo-reel`} key={uuid()}>
+                <DemoReel data={data}/>
             </Route>
             <Route exact path="/project/:cubeId">
                 <Project {...props} />
