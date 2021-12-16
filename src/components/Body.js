@@ -8,6 +8,7 @@ import TextBody from "./TextBody";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import DemoReel from "../pages/DemoReel";
+import VideoGrid from "../pages/VideoGrid";
 
 const Body = (props) => {
     const {data} = props;
@@ -39,10 +40,10 @@ const Body = (props) => {
             {/*        </Route>*/}
             {/*))}*/}
             <Route exact path={`/animation`} key={uuid()}>
-                Animation page
+                <VideoGrid videos={data.pages.animation?.videos}/>
             </Route>
             <Route exact path={`/rigging`} key={uuid()}>
-                Rigging page
+                <VideoGrid videos={data.pages.rigging?.videos}/>
             </Route>
             <Route exact path={`/about`} key={uuid()}>
                 <About data={data}/>

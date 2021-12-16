@@ -1,0 +1,35 @@
+.video-grid-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-grid-container .videos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.video-grid-iframe {
+    margin: 2% 1%;
+    flex: 0 0 31.333%;
+}
+
+@media only screen and (max-width: 1150px) {
+    .video-grid-iframe {
+        flex: 0 0 48%;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .video-grid-container .videos-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .video-grid-iframe {
+        flex: unset;
+        width: 100%;
+    }
+}
+
