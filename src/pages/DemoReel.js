@@ -4,10 +4,10 @@ import './DemoReel.css';
 import VimeoVideo from "../components/VimeoVideo";
 
 function DemoReel({data}) {
-    const {mobile} = data.breakPoints;
-    const isMobile = useMediaQuery({
-        query: `(max-width: ${mobile || "600px"})`,
-    });
+    // const {mobile} = data.breakPoints;
+    // const isMobile = useMediaQuery({
+    //     query: `(max-width: ${mobile || "600px"})`,
+    // });
 
     const {demoReel} = data.pages;
     const {videoId, videoHeight} = demoReel;

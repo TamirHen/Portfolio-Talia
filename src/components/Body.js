@@ -3,42 +3,20 @@ import {Switch, Route} from "react-router-dom";
 import uuid from "react-uuid";
 import Home from "../pages/Home";
 import Project from "../pages/Project";
-import Grid from "./Grid";
-import TextBody from "./TextBody";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import DemoReel from "../pages/DemoReel";
 import VideoGrid from "../pages/VideoGrid";
+import Sketches from "../pages/Sketches";
 
 const Body = (props) => {
     const {data} = props;
 
     return (
         <Switch>
-            {/*{data.pages.hlinks.map((hlink) => (*/}
-            {/*    hlink.name === 'About' ?*/}
-            {/*        <Route exact path={`/${hlink.name}`} key={uuid()}>*/}
-            {/*            <About data={data}/>*/}
-            {/*        </Route>*/}
-            {/*        :*/}
-            {/*        <Route exact path={`/${hlink.name}`} key={uuid()}>*/}
-            {/*            <>*/}
-            {/*                {hlink.header && (*/}
-            {/*                    <h4 style={{margin: "50px, 0px, 30px, 0px"}}>{hlink.header}</h4>*/}
-            {/*                )}*/}
-
-            {/*                {hlink.grid && <Grid page="hlink" hlink={hlink} {...props} />}*/}
-            {/*                {(hlink.title || hlink.subtitle || hlink.text) && (*/}
-            {/*                    <TextBody*/}
-            {/*                        title={hlink.title || ""}*/}
-            {/*                        subtitle={hlink.subtitle || ""}*/}
-            {/*                        text={hlink.text || ""}*/}
-            {/*                        data={data}*/}
-            {/*                    />*/}
-            {/*                )}*/}
-            {/*            </>*/}
-            {/*        </Route>*/}
-            {/*))}*/}
+            <Route exact path={`/sketches`} key={uuid()}>
+                <Sketches data={data}/>
+            </Route>
             <Route exact path={`/animation`} key={uuid()}>
                 <VideoGrid videos={data.pages.animation?.videos}/>
             </Route>

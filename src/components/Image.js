@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import "./Image.css";
 
@@ -24,17 +24,13 @@ const Image = (props) => {
         gridColumnEnd: columnEnd,
       }}
     >
-      {page === "project" ? (
+      {/*{page === "project" ? (*/}
         <img className={"image"} src={image} alt={name} />
-      ) : (
-        <Link to={`/project/${id}`}>
-          <img className={"image fade"} src={image} alt={name} />
-          {/*<div className="figure-text">*/}
-          {/*  <p style={{ fontWeight: "bold" }}>{name}</p>*/}
-          {/*  <p style={{ fontSize: "14px", marginTop: "3px" }}>{genre}</p>*/}
-          {/*</div>*/}
-        </Link>
-      )}
+        {/*) : (*/}
+        {/*  <Link to={`/project/${id}`}>*/}
+        {/*    <img className={"image fade"} src={image} alt={name} />*/}
+        {/*  </Link>*/}
+        {/*)}*/}
     </figure>
   );
 };

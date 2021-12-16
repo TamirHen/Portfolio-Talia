@@ -10,7 +10,7 @@ const Header = (props) => {
     const {data, padding} = props;
     const {headerLinks} = data;
     const isShrinkMenu = useMediaQuery({
-        query: `(max-width: ${data.breakPoints?.menu || "800px"})`,
+        query: `(max-width: ${data.breakPoints?.menu || "900px"})`,
     });
     const [isMenuActive, setIsMenuActive] = useState(false);
     const getLinks = () => {

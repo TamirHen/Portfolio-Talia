@@ -6,7 +6,7 @@ import uuid from "react-uuid";
 import Image from "./Image";
 
 const Grid = (props) => {
-  const { data, page, cubeId, hlink } = props;
+  const { data, page, cubeId } = props;
   const { mobile, tablet } = data.breakPoints;
   const isTablet = useMediaQuery({
     query: `(max-width: ${tablet || "1200px"})`,
@@ -16,14 +16,14 @@ const Grid = (props) => {
   });
   const gridRows = isTablet
     ? isMobile
-      ? data.pages[page]?.grid.mobile?.rows || hlink?.grid.mobile?.rows
-      : data.pages[page]?.grid.tablet?.rows || hlink?.grid.tablet?.rows
-    : data.pages[page]?.grid.rows || hlink?.grid?.rows;
+      ? data.pages[page]?.grid.mobile?.rows
+      : data.pages[page]?.grid.tablet?.rows
+    : data.pages[page]?.grid.rows
   const gridColumns = isTablet
     ? isMobile
-      ? data.pages[page]?.grid.mobile?.columns || hlink?.grid.mobile?.columns
-      : data.pages[page]?.grid.tablet?.columns || hlink?.grid.tablet?.columns
-    : data.pages[page]?.grid.columns || hlink?.grid.columns;
+      ? data.pages[page]?.grid.mobile?.columns
+      : data.pages[page]?.grid.tablet?.columns
+    : data.pages[page]?.grid.columns
   const images = data.pages[page]?.images;
 
   const style = {
@@ -37,38 +37,7 @@ const Grid = (props) => {
   };
 
   const pageRender = () => {
-    switch (page) {
-      case "hlink":
-        return hlink.images?.map(
-          (image) =>
-            data.cubes.find((cube) => cube.id == image.cubeId) && (
-              <Image
-                key={uuid()}
-                {...image}
-                {...((isMobile && image.mobile) || (isTablet && image.tablet))}
-                {...data.cubes.find((cube) => cube.id == image.cubeId)}
-                page={page}
-              />
-            )
-        );
-
-      case "project":
-        return images.map(
-          (image) =>
-            image.cubeId == cubeId && (
-              <Image
-                key={uuid()}
-                {...image}
-                {...((isMobile && image.mobile) || (isTablet && image.tablet))}
-                {...data.cubes.find((cube) => cube.id == image.cubeId)}
-                page={page}
-              />
-            )
-        );
-
-      default:
-        //Homepage
-        return images?.map(
+     return images?.map(
           (image) =>
             data.cubes.find((cube) => cube.id == image.cubeId) && (
               <Image
@@ -81,7 +50,6 @@ const Grid = (props) => {
             )
         );
     }
-  };
 
   return <div style={style.gallery}>{pageRender()}</div>;
 };

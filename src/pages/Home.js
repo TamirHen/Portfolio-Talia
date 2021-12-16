@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "../components/Grid";
+// import Grid from "../components/Grid";
 import {Link} from "react-router-dom";
 import './Home.css';
 import {useMediaQuery} from "react-responsive";
