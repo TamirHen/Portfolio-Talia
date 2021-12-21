@@ -1,17 +1,29 @@
 import React from 'react';
+import GoTo from "./GoTo";
+import './VimeoVideo.css';
+import {Link} from "react-router-dom";
 
-const VimeoVideo = ({height, title, videoId, className}) => {
+const VimeoVideo = ({name, videoId}) => {
     return (
-        <iframe
-            className={"vimeo-video " + className}
-            src={`https://player.vimeo.com/video/${videoId}`}
-            frameBorder="0"
-            title={title}
-            height={height?.toString()}
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowFullScreen
-        />
+        <div className="vimeo-video-container">
+            <div className='vimeo-iframe-container'>
+                <iframe
+                    className={"vimeo-video"}
+                    src={`https://player.vimeo.com/video/${videoId}?byline=false&portrait=false${name ? '&title=null' : ''}`}
+                    frameBorder="0"
+                    title={name}
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowFullScreen
+                />
+            </div>
+            {name && <Link className='video-name-wrapper'>
+                <h4 className={'video-name'}>{name}</h4>
+                <div className='goto-icon-wrapper'>
+                    <GoTo/>
+                </div>
+            </Link>}
+        </div>
     );
 };
 

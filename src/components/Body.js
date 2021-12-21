@@ -6,7 +6,7 @@ import Project from "../pages/Project";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import DemoReel from "../pages/DemoReel";
-import VideoGrid from "../pages/VideoGrid";
+import VideoGrid from "./VideoGrid";
 import Sketches from "../pages/Sketches";
 
 const Body = (props) => {
@@ -14,14 +14,17 @@ const Body = (props) => {
 
     return (
         <Switch>
+            <Route exact path="/project/:cubeId">
+                <Project {...props} />
+            </Route>
             <Route exact path={`/sketches`} key={uuid()}>
                 <Sketches data={data}/>
             </Route>
             <Route exact path={`/animation`} key={uuid()}>
-                <VideoGrid videos={data.pages.animation?.videos}/>
+                <VideoGrid data={data} videos={data.pages.animation?.videos}/>
             </Route>
             <Route exact path={`/rigging`} key={uuid()}>
-                <VideoGrid videos={data.pages.rigging?.videos}/>
+                <VideoGrid data={data} videos={data.pages.rigging?.videos}/>
             </Route>
             <Route exact path={`/about`} key={uuid()}>
                 <About data={data}/>

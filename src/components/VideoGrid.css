@@ -1,7 +1,5 @@
 .video-grid-container {
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .video-grid-container .videos-wrapper {
@@ -10,25 +8,25 @@
     justify-content: flex-start;
 }
 
-.video-grid-iframe {
-    margin: 2% 1%;
-    flex: 0 0 31.333%;
+.vimeo-video-wrapper {
+    margin: 2% 1% 0 1%;
+    flex: 0 0 48%;
 }
 
-@media only screen and (max-width: 1150px) {
-    .video-grid-iframe {
-        flex: 0 0 48%;
-    }
-}
-
-
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1400px) {
     .video-grid-container .videos-wrapper {
         flex-direction: row;
         justify-content: center;
     }
-    .video-grid-iframe {
+    .vimeo-video-wrapper {
         flex: unset;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .vimeo-video-wrapper {
         width: 100%;
     }
 }

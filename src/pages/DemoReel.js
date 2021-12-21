@@ -17,8 +17,6 @@ function DemoReel({data}) {
             {
                 videoId &&
                     <VimeoVideo
-                        height={videoHeight}
-                        title={"Demo Reel"}
                         className="demo-reel-iframe"
                         videoId={videoId}
                     />

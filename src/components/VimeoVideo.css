@@ -1,0 +1,39 @@
+.vimeo-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.vimeo-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vimeo-video-container {
+    width: 100%;
+}
+
+.video-name-wrapper {
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.video-name {
+    margin: 0 10px 0 0;
+}
+
+.video-name-wrapper .goto-icon-wrapper {
+    transition: transform 100ms ease-out;
+}
+
+.video-name-wrapper:hover .goto-icon-wrapper {
+    transform: translateX(5px);
+}
