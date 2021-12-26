@@ -6,9 +6,10 @@ import {useParams} from "react-router-dom";
 import VimeoVideo from "../components/VimeoVideo";
 
 const Project = (props) => {
-    const {cubeId} = useParams();
-    const {data, videoId} = props;
-    const cube = data.cubes.find((cube) => cube.id == cubeId);
+    const {videoId} = useParams();
+    const {data} = props;
+    const video = data.pages.animation.videos.find((video) => video.videoId == videoId)
+        || data.pages.rigging.videos.find((video) => video.videoId == videoId);
 
     return (
         <>
@@ -19,11 +20,11 @@ const Project = (props) => {
                     videoId={videoId}
                 />
             }
-            <Grid page="project" cubeId={cubeId} {...props} />
+            <Grid page="project" {...props} />
             <TextBody
-                title={cube.name}
-                subtitle={cube.genre}
-                text={cube.description}
+                title={video.title}
+                subtitle="This is a subtitle"
+                text="This is a text"
                 data={data}
             />
         </>

@@ -17,7 +17,7 @@ const VimeoVideo = ({name, videoId}) => {
                     allowFullScreen
                 />
             </div>
-            {name && <Link className='video-name-wrapper'>
+            {name && <Link to={`/project/${videoId}`} className='video-name-wrapper'>
                 <h4 className={'video-name'}>{name}</h4>
                 <div className='goto-icon-wrapper'>
                     <GoTo/>

@@ -6,7 +6,7 @@ import uuid from "react-uuid";
 import Image from "./Image";
 
 const Grid = (props) => {
-  const { data, page, cubeId } = props;
+  const { data, page } = props;
   const { mobile, tablet } = data.breakPoints;
   const isTablet = useMediaQuery({
     query: `(max-width: ${tablet || "1200px"})`,

@@ -14,7 +14,7 @@ const Body = (props) => {
 
     return (
         <Switch>
-            <Route exact path="/project/:cubeId">
+            <Route exact path="/project/:videoId">
                 <Project {...props} />
             </Route>
             <Route exact path={`/sketches`} key={uuid()}>

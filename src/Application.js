@@ -4,6 +4,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {DataContext} from "./providers/DataProvider";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
     const data = useContext(DataContext);
@@ -22,6 +23,7 @@ function App() {
         <>
             {data ? (
                 <Router>
+                    <ScrollToTop/>
                     <Switch>
                         <>
                             <div style={style.mainContainer}>
