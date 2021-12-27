@@ -8,7 +8,7 @@ const Sketches = (props) => {
 
     return (
         <div className="sketches-page-container">
-            {sketches.grid && <Grid page="sketches" {...props} />}
+            {sketches.grid && <Grid page={pages.sketches} {...props} />}
         </div>
     );
 };

@@ -19,7 +19,7 @@ const TextBody = (props) => {
                 className="text-body"
                 style={{fontSize: isMobile ? "13px" : "15px", marginTop: "30px"}}
             >
-                {text.split("\n").map((line) => (
+                {text && text.split("\n").map((line) => (
                     <p key={uuid()} className="text-line">
                         {line}
                     </p>

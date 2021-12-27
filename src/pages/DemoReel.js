@@ -17,7 +17,6 @@ function DemoReel({data}) {
             {
                 videoId &&
                     <VimeoVideo
-                        className="demo-reel-iframe"
                         videoId={videoId}
                     />
             }

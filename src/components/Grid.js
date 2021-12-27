@@ -8,6 +8,7 @@ import Image from "./Image";
 const Grid = (props) => {
   const { data, page } = props;
   const { mobile, tablet } = data.breakPoints;
+  const {grid} = page;
   const isTablet = useMediaQuery({
     query: `(max-width: ${tablet || "1200px"})`,
   });
@@ -16,15 +17,15 @@ const Grid = (props) => {
   });
   const gridRows = isTablet
     ? isMobile
-      ? data.pages[page]?.grid.mobile?.rows
-      : data.pages[page]?.grid.tablet?.rows
-    : data.pages[page]?.grid.rows
+      ? grid.mobile?.rows
+      : grid.tablet?.rows
+    : grid.rows
   const gridColumns = isTablet
     ? isMobile
-      ? data.pages[page]?.grid.mobile?.columns
-      : data.pages[page]?.grid.tablet?.columns
-    : data.pages[page]?.grid.columns
-  const images = data.pages[page]?.images;
+      ? grid.mobile?.columns
+      : grid.tablet?.columns
+    : grid.columns
+  const images = page?.images;
 
   const style = {
     gallery: {

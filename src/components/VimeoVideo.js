@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 
 const VimeoVideo = ({name, videoId}) => {
     return (
-        <div className="vimeo-video-container">
+        <div className={`vimeo-video-container`}>
             <div className='vimeo-iframe-container'>
                 <iframe
-                    className={"vimeo-video"}
+                    className={`vimeo-video`}
                     src={`https://player.vimeo.com/video/${videoId}?byline=false&portrait=false${name ? '&title=null' : ''}`}
                     frameBorder="0"
                     title={name}
