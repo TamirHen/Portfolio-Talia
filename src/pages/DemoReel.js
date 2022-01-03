@@ -10,7 +10,7 @@ function DemoReel({data}) {
     // });
 
     const {demoReel} = data.pages;
-    const {videoId, videoHeight} = demoReel;
+    const {videoId} = demoReel;
 
     return (
         <div className={"demo-reel-container"}>

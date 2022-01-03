@@ -20,7 +20,7 @@ const Header = (props) => {
                     <div
                         className="grey-screen"
                         onClick={() => setIsMenuActive(false)}
-                    ></div>
+                    />
                 )}
                 <ul
                     className={
