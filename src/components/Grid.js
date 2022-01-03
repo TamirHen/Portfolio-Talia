@@ -19,12 +19,12 @@ const Grid = (props) => {
     ? isMobile
       ? grid.mobile?.rows
       : grid.tablet?.rows
-    : grid.rows
+    : grid.desktop?.rows
   const gridColumns = isTablet
     ? isMobile
       ? grid.mobile?.columns
       : grid.tablet?.columns
-    : grid.columns
+    : grid.desktop?.columns
   const images = page?.images;
 
   const style = {
