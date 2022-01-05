@@ -34,7 +34,7 @@ const Project = (props) => {
                     />
                 </div>
             }
-            <Grid page={video.projectPage} {...props} />
+            {video.projectPage.images && <Grid page={video.projectPage} {...props} />}
             <TextBody
                 title={video.title}
                 subtitle={video.projectPage?.subtitle}

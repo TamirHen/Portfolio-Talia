@@ -44,7 +44,7 @@ const Grid = (props) => {
               <Image
                 key={uuid()}
                 {...image}
-                {...((isMobile && image.mobile) || (isTablet && image.tablet))}
+                {...((isMobile && image.mobile) || (isTablet && image.tablet) || image.desktop)}
                 {...data.cubes.find((cube) => cube.id == image.cubeId)}
                 page={page}
               />

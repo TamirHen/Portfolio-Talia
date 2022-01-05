@@ -5,15 +5,12 @@ import "./Image.css";
 
 const Image = (props) => {
   const {
-    id,
     image,
     name,
-    genre,
     rowStart,
     rowEnd,
     columnStart,
     columnEnd,
-    page,
   } = props;
   return (
     <figure
