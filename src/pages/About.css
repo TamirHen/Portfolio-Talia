@@ -1,13 +1,25 @@
 .cv-link {
-  color: white;
-  background: black;
+  color: #fff;
+  background: #8C429E;
   padding: 15px 10px 3px;
   border-radius: 2px;
-
+  font-weight: 500;
 }
 
 .open-cv-txt {
   position: relative;
   top: -7px;
   margin-right: 10px;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.profile-image {
+  margin-top: 50px;
+  max-width: 250px;
 }

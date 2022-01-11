@@ -26,3 +26,8 @@ button[type=submit] {
 .container-body {
     margin-bottom: 40px;
 }
+
+.main-body {
+    max-width: 1400px;
+    width: 100%;
+}

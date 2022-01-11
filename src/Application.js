@@ -14,6 +14,7 @@ function App() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            alignItems: "center",
             minHeight: "100vh",
         },
     };
@@ -27,7 +28,7 @@ function App() {
                     <Switch>
                         <>
                             <div style={style.mainContainer}>
-                                <div>
+                                <div className={'main-body'}>
                                     <Header padding={padding} data={data}/>
                                     <div className={"container-body"} style={{padding: padding}}>
                                         <Route path="/">

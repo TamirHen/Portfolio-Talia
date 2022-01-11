@@ -51,7 +51,6 @@ const Grid = (props) => {
             )
         );
     }
-
   return <div style={style.gallery}>{pageRender()}</div>;
 };
 

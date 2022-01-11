@@ -10,7 +10,7 @@ const TextBody = (props) => {
     });
 
     return (
-        <div className="project-page-text" style={{margin: "50px 0px"}}>
+        <div className="page-text-body" style={isMobile ? {margin: "20px 0 40px 0"} : {margin: "50px 0"}}>
             <div className="text-title">
                 {title && <h4 style={{fontSize: isMobile ? "16px" : "18px"}}>{title}</h4>}
                 {subtitle && <p style={{fontSize: isMobile ? "14px" : "15px"}}>{subtitle}</p>}

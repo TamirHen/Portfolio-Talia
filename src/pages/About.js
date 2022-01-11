@@ -6,7 +6,7 @@ import {ReactComponent as NewTabIcon} from '../assets/external-link.svg';
 import './About.css';
 
 function About({data}) {
-    const {title, subtitle, description, cv} = data.pages.about;
+    const {title, subtitle, description, cv, photo} = data.pages.about;
     const {mobile} = data.breakPoints;
     const isMobile = useMediaQuery({
         query: `(max-width: ${mobile || "600px"})`,
@@ -14,12 +14,25 @@ function About({data}) {
 
     return (
         <div className={"page-about"}>
-            <TextBody
-                title={title}
-                subtitle={subtitle}
-                text={description}
-                data={data}
-            />
+
+            <div className={'info-wrapper'} style={isMobile ? {flexDirection: 'column'} : {flexDirection: 'row'}}>
+                <TextBody
+                    title={title}
+                    subtitle={subtitle}
+                    text={description}
+                    data={data}
+                />
+                {photo && <img className={"profile-image"} src={photo} alt={'about-photo'}
+                style={isMobile ? {
+                    marginTop: 0,
+                    maxWidth: '150px'
+                } : {
+                    marginTop: '50px',
+                    maxWidth: '250px',
+                    justifySelf: 'flex-end'
+                }}
+                />}
+            </div>
 
             {
                 isMobile ?
