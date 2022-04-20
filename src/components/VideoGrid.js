@@ -14,7 +14,7 @@ const VideoGrid = (props) => {
         <div className="video-grid-container">
             <div className="videos-wrapper">
                 {
-                    videos && videos.sort((x,y) => x.position - y.position).map((video, index) => (
+                    videos && videos.sort((x,y) => y.position - x.position).map((video, index) => (
                         <div className='vimeo-video-wrapper'>
                             <VimeoVideo
                                 key={uuid()}
