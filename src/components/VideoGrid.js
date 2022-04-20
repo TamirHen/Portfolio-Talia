@@ -8,19 +8,18 @@ const VideoGrid = (props) => {
     const {videos} = props;
     const isMobile = useMediaQuery({
         query: `(max-width: 750px)`,
-    });
+    })
 
-    console.log(isMobile)
     return (
         <div className="video-grid-container">
             <div className="videos-wrapper">
                 {
-                    videos && Object.keys(videos).reverse().map((key, index) => (
+                    videos && videos.sort((x,y) => x.position - y.position).map((video, index) => (
                         <div className='vimeo-video-wrapper'>
                             <VimeoVideo
                                 key={uuid()}
-                                name={videos[key].title}
-                                videoId={videos[key].videoId}
+                                name={video.title}
+                                videoId={video.videoId}
                             />
                         </div>
                     ))
