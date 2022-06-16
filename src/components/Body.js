@@ -17,7 +17,7 @@ const Body = (props) => {
             <Route exact path="/project/:videoId">
                 <Project {...props} />
             </Route>
-            <Route exact path={`/sketches`} key={uuid()}>
+            <Route exact path={`/other`} key={uuid()}>
                 <Sketches data={data}/>
             </Route>
             <Route exact path={`/animation`} key={uuid()}>

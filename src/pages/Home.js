@@ -28,9 +28,9 @@ const Home = (props) => {
                 </Link>
             </div>
             <div className={"home-btn-wrapper"}>
-                <Link to={"/sketches"}>
+                <Link to={"/other"}>
                     <img className={"home-btn"} src={data.pages.home.sketchesImage} alt={"Sketches"}/>
-                    <h2>Sketches</h2>
+                    <h2>Other</h2>
                 </Link>
             </div>
         </div>
