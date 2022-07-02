@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import DemoReel from "../pages/DemoReel";
 import VideoGrid from "./VideoGrid";
 import Sketches from "../pages/Sketches";
+import ShortFilm from '../pages/ShortFilm';
 
 const Body = (props) => {
     const {data} = props;
@@ -34,6 +35,9 @@ const Body = (props) => {
             </Route>
             <Route exact path={`/demo-reel`} key={uuid()}>
                 <DemoReel data={data}/>
+            </Route>
+            <Route exact path={`/short-film`} key={uuid()}>
+                <ShortFilm data={data}/>
             </Route>
             <Route exact path="/project/:cubeId">
                 <Project {...props} />

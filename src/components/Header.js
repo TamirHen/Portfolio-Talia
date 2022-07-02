@@ -32,7 +32,7 @@ const Header = (props) => {
                     {headerLinks && Object.keys(headerLinks)
                         .sort((a, b) => headerLinks[a].order - headerLinks[b].order)
                         .map((key, index) => (
-                            <li key={uuid()} className="header-link"
+                            !headerLinks[key].hide && <li key={uuid()} className="header-link"
                                 id={`link-${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
                                 <NavLink activeStyle={{color: "#1D3EC3"}} onClick={() => setIsMenuActive(false)}
                                          to={`/${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
