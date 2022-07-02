@@ -22,9 +22,9 @@ const Home = (props) => {
                 </Link>
             </div>
             <div className={"home-btn-wrapper"}>
-                <Link to={"/rigging"}>
-                    <img className={"home-btn"} src={data.pages.home.riggingImage} alt={"Rigging"}/>
-                    <h2>Rigging</h2>
+                <Link to={"/short-film"}>
+                    <img className={"home-btn"} src={data.pages.home.shortFilmImage} alt={"Short Film"}/>
+                    <h2>Short Film</h2>
                 </Link>
             </div>
             <div className={"home-btn-wrapper"}>
