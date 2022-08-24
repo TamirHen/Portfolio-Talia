@@ -1,9 +1,10 @@
-import React from "react";
-import {useMediaQuery} from "react-responsive";
-import uuid from "react-uuid";
+import React from "react"
+import {useMediaQuery} from "react-responsive"
+import uuid from "react-uuid"
+import './TextBody.css'
 
 const TextBody = (props) => {
-    const {data, title, subtitle, text} = props;
+    const {data, title, subtitle, text} = props
     const {mobile} = data.breakPoints;
     const isMobile = useMediaQuery({
         query: `(max-width: ${mobile || "600px"})`,
@@ -19,11 +20,9 @@ const TextBody = (props) => {
                 className="text-body"
                 style={{fontSize: isMobile ? "14px" : "16px", marginTop: "30px"}}
             >
-                {text && text.split("\n").map((line) => (
-                    <p key={uuid()} className="text-line">
-                        {line}
-                    </p>
-                ))}
+                <p className='description'>
+                    {text}
+                </p>
             </div>
         </div>
     );
