@@ -31,3 +31,8 @@ button[type=submit] {
     max-width: 1400px;
     width: 100%;
 }
+@media only screen and (max-width: 900px) {
+    .container-body {
+        margin-top: 80px;
+    }
+}
