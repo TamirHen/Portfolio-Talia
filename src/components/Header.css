@@ -91,7 +91,7 @@ header {
 }
 
 .grey-screen {
-  position: absolute;
+  position: fixed;
   top: 100px;
   bottom: 0;
   left: 0;
