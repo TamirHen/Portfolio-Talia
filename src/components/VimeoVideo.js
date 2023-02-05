@@ -12,8 +12,6 @@ const VimeoVideo = ({name, videoId}) => {
                     src={`https://player.vimeo.com/video/${videoId}?byline=false&portrait=false${name ? '&title=null' : ''}`}
                     frameBorder="0"
                     title={name}
-                    webkitallowfullscreen
-                    mozallowfullscreen
                     allowFullScreen
                 />
             </div>

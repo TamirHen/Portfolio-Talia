@@ -1,6 +1,5 @@
 import React from "react"
 import {useMediaQuery} from "react-responsive"
-import uuid from "react-uuid"
 import './TextBody.css'
 
 const TextBody = (props) => {

@@ -6,18 +6,19 @@ import {useMediaQuery} from "react-responsive";
 
 const VideoGrid = (props) => {
     const {videos} = props;
-    const isMobile = useMediaQuery({
-        query: `(max-width: 750px)`,
-    })
+    // const isMobile = useMediaQuery({
+    //     query: `(max-width: 750px)`,
+    // })
 
     return (
         <div className="video-grid-container">
             <div className="videos-wrapper">
                 {
                     videos && videos.sort((x,y) => y.position - x.position).map((video, index) => (
-                        <div className='vimeo-video-wrapper'>
+                        <div className='vimeo-video-wrapper'
+                             key={uuid()}
+                        >
                             <VimeoVideo
-                                key={uuid()}
                                 name={video.title}
                                 videoId={video.videoId}
                             />

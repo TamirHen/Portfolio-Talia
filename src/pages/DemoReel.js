@@ -1,5 +1,4 @@
 import React from 'react';
-import {useMediaQuery} from "react-responsive";
 import './DemoReel.css';
 import VimeoVideo from "../components/VimeoVideo";
 
