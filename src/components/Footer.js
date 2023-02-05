@@ -16,8 +16,8 @@ const Footer = (props) => {
                 {props.data.socialMedia && <SocialMediaBar socialMediaData={props.data.socialMedia}/>}
             </section>
             <section className="lower footer-section">
-                <a href="https://github.com/TamirHen-Portfolio"
-                   target={"_blank"}>{`©${new Date().getFullYear()} Tamir Hen. All rights reserved.`}</a>
+                <a href="https://webbrew.co.uk"
+                   target={"_blank"}>{`©${new Date().getFullYear()} Webbrew. All rights reserved.`}</a>
             </section>
         </footer>
     );

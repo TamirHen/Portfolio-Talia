@@ -1,9 +1,13 @@
 .cv-link {
   color: #fff;
-  background: #8C429E;
+  background: #000;
   padding: 15px 10px 3px;
   border-radius: 2px;
   font-weight: 500;
+  transition: all 200ms ease;
+}
+.cv-link:hover {
+  background: #808080;
 }
 
 .open-cv-txt {

@@ -3,7 +3,6 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #fff8eb;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;

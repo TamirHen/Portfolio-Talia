@@ -25,11 +25,11 @@
     font-weight: bold;
     padding: 11px 23px 8px;
     cursor: pointer;
-    transition: all 150ms linear;
+    transition: all 200ms ease;
 }
 
 .btn-submit:hover {
-    opacity: .8;
+    background-color: #808080;
 }
 
 .success-message {

@@ -34,7 +34,7 @@ const Header = (props) => {
                         .map((key, index) => (
                             !headerLinks[key].hide && <li key={uuid()} className="header-link"
                                 id={`link-${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
-                                <NavLink activeStyle={{color: "#1D3EC3"}} onClick={() => setIsMenuActive(false)}
+                                <NavLink activeStyle={{color: "#808080"}} onClick={() => setIsMenuActive(false)}
                                          to={`/${headerLinks[key].name.replace(" ", "-").toLowerCase()}`}>
                                     {headerLinks[key].name}
                                 </NavLink>
